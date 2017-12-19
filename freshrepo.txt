@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	FILE *fp;
+	fp=fopen("printVovels.txt","w");
+    char ch[]={"beauty is better than ugly and shortest is better than longest"};
+    int i,j,len=strlen(ch);
+    printf("%d ",len);
+    for(i=0;i<len;i++)
+      if(ch[i]=='a'||ch[i]=='e'||ch[i]=='i'||ch[i]=='o'||ch[i]=='u')
+    	fprintf(fp,"%c ",ch[i]);
+    fclose(fp);
+    getch();
+}
